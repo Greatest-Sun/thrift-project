@@ -26,9 +26,13 @@ public class JavaClient {
 
     private static void perform(ChaveValor.Client client) throws TException {
         String buffer;
-        buffer = client.setKV(1, "primeiro");
-        System.out.println(buffer);
-        buffer = client.setKV(1, "segundo");
-        System.out.println(buffer);
+
+        buffer = client.setKV(1, "opa");
+        System.out.println("Valor associado á chave anteriormente: " + buffer);
+        System.out.println("Novo valor: " + client.getKV(1));
+        System.out.println("");
+        buffer = client.setKV(1, "hello");
+        System.out.println("Valor associado á chave anteriormente: " + buffer);
+        System.out.println("Novo valor: " + client.getKV(1));
     }
 }
